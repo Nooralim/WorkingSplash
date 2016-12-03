@@ -1,5 +1,6 @@
 package com.example.nazo.myapplication;
 
+import android.content.Intent;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.jar.Attributes;
@@ -23,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                           R.drawable.penguino,R.drawable.pikachu,R.drawable.sonic,R.drawable.tiger};
 
     Toolbar SearchBar;
+    private Button mButton;
 
     RecyclerView mRecyclerView;
     RecyclerAdapter mAdapter;
@@ -31,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         SearchBar = (Toolbar)findViewById(R.id.searchBar);
